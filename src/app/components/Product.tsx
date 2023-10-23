@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { ProductType } from '@/types/ProductType';
 
 type ProductProps = {
