@@ -1,7 +1,8 @@
+import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
 import { Navbar } from './components/Navbar';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,9 +16,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const bodyClasses = clsx(inter.className, 'bg-slate-700');
+
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={bodyClasses}>
         <Navbar />
         <main className="bg-slate-700 h-screen p-16">{children}</main>
       </body>
