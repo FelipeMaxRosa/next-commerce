@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
+import { SignedIn, SignedOut } from '@clerk/nextjs/app-beta';
 
 export function Navbar() {
   return (
@@ -10,6 +11,10 @@ export function Navbar() {
       >
         Next Store
       </Link>
+      <div className="flex items-center gap-8">
+        <SignedIn>Usuario Logado</SignedIn>
+        <SignedOut>Fazer Login</SignedOut>
+      </div>
     </nav>
   );
 }
